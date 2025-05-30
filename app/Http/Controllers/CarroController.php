@@ -11,6 +11,7 @@ class CarroController extends Controller
         return Carro::all();
     }
 
+
     // Cadastrar um novo carro
     public function store(Request $request)
     {
@@ -22,7 +23,6 @@ class CarroController extends Controller
         ]);
 
         $carro = Carro::create($request->all());
-
         return response()->json($carro, 201);
     }
 }
